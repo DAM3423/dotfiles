@@ -1,0 +1,40 @@
+/* Catppuccin Macchiato Color Scheme for Wofi */
+
+/* Backgrounds */
+window {
+    background-color: #24273A;
+    border: 2px solid #CAD3F5;
+    padding: 5px;
+}
+
+/* Input field */
+entry {
+    background-color: #494D64;
+    color: #CAD3F5;
+    border: 1px solid #CAD3F5;
+    padding: 5px;
+}
+
+/* List items */
+list {
+    background-color: #24273A;
+    color: #F4DBD6;  /* Brighter text color for unselected items */
+}
+
+/* Selected item */
+list:selected {
+    background-color: #CAD3F5;
+    color: #24273A;
+}
+
+/* Hovered item */
+list:hover {
+    background-color: #363A4F;  /* Slightly lighter than the window background */
+    color: #F5E0DC;  /* Brighter color on hover */
+}
+
+/* Text Colors */
+text {
+    color: #CAD3F5;
+}
+

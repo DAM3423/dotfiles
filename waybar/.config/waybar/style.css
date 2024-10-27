@@ -27,7 +27,7 @@
 
 * {
     border: none;
-    border-radius: 6px; /* Adding subtle rounded corners */
+    border-radius: 6px;
     font-family: Roboto, Helvetica, Arial, sans-serif;
     font-size: 18px;
     min-height: 0;
@@ -37,12 +37,12 @@ window#waybar {
     background: @base;
     border-bottom: 3px solid @surface1;
     color: @text;
-    min-height: 25px; /* Adjust this value to make the bar thicker */
-    padding: 5px 0; /* Optional: adds vertical padding for better spacing */
+    min-height: 25px;
+    padding: 5px 0;
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.9); /* Darker, soft overlay for tooltip */
+  background: rgba(43, 48, 59, 0.9);
   border: 1px solid @surface2;
 }
 tooltip label {
@@ -50,15 +50,42 @@ tooltip label {
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background: transparent;
-    color: @subtext0;
-    border-bottom: 3px solid transparent;
+    padding: 3px 8px;
+    margin: 0 3px;
+    background: @surface1;
+    color: @subtext1;
+    border-radius: 4px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#workspaces button:hover {
+    background: @overlay0;
+    color: @text;
 }
 
 #workspaces button.focused {
-    background: @surface1;
+    background: @mauve;
+    color: @crust;
     border-bottom: 3px solid @rosewater;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+@keyframes workspaceHighlight {
+    0% {
+        background-color: @rosewater;
+        color: @mantle;
+    }
+    100% {
+        background-color: @mauve;
+        color: @crust;
+    }
+}
+
+#workspaces button.focused {
+    animation: workspaceHighlight 0.5s ease-in-out alternate;
+    animation-iteration-count: 1;
 }
 
 #mode, #clock, #battery {

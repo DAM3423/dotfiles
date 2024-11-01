@@ -104,29 +104,29 @@ tooltip label {
 }
 
 #battery {
-    background-color: @peach;
+    color: @green;
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    background-color: @surface0;
+    color: @text;
+    border-radius: 4px;
+}
+
+#pulseaudio.muted {
+    background-color: @red;
     color: @crust;
 }
 
-#battery.charging {
+#pulseaudio:hover {
+    background-color: @overlay0;
     color: @text;
-    background-color: @green;
 }
 
-@keyframes blink {
-    to {
-        background-color: @rosewater;
-        color: @mantle;
-    }
-}
-
-#battery.warning:not(.charging) {
-    background: @red;
+#network {
+    padding: 0 10px;
+    background-color: @surface0;
     color: @text;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    border-radius: 4px;
 }
-

@@ -4,7 +4,7 @@
 DOTFILES_DIR=~/Github/dotfiles
 
 # Array of application directories to symlink
-apps=("nvim" "kitty" "hypr" "waybar" "wofi")
+apps=("bash" "nvim" "kitty" "hypr" "waybar" "wofi")
 
 # Loop through each application and set up the symlink
 for app in "${apps[@]}"; do
